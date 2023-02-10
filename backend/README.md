@@ -1,9 +1,6 @@
 # ToDo Backend application
 
-## Setup instructions
-
-
-### Install requirements
+## Install requirements
 ```
 pip install -r requirements.txt
 ```
@@ -12,7 +9,7 @@ pip install -r requirements.txt
 > - Django REST Framework
 
 
-### Setup Database
+## Setup Database
 
 Create or migrate the database with the following command:
 ```
@@ -25,7 +22,7 @@ python todo/manage.py createsuperuser
 ```
 
 
-### Run the application
+## Run the application
 ```
 python todo/manage.py runserver
 ```
