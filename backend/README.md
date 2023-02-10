@@ -1,4 +1,4 @@
-# ToDo Backend application
+# TODO-List Backend application
 
 ## Install requirements
 ```

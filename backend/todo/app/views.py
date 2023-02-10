@@ -1,10 +1,10 @@
 from rest_framework import viewsets
 
-from .serializers import TodoSerializer
-from .models import Todo
+from .serializers import TaskSerializer
+from .models import Task
 
 
-class TodoView(viewsets.ModelViewSet):
+class TaskView(viewsets.ModelViewSet):
 
-    queryset = Todo.objects.all()
-    serializer_class = TodoSerializer
+    queryset = Task.objects.all()
+    serializer_class = TaskSerializer
