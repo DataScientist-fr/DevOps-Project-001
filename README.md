@@ -61,7 +61,13 @@ Create deployment and service for backend application. Check you can access the 
 
 Go to the React front-end directory and create a Dockerfile for the frontend. Then build the Docker image. Finally, run the Docker container and check that the application is working properly.
 
-> When you will deploy the frontend on Kubernetes (minikube), you will need to change the backend url in the frontend code. You can do it by editing the file `frontend/src/App.js` and change `127.0.0.1:8000` by the cluster url of backend application.
+> When you will deploy the frontend on Kubernetes (minikube), you will need to change the backend url in the frontend code. You can do it by editing the following files and change `127.0.0.1:8000` by the cluster url of backend application :
+/home/romain/Workspace/DevOps-Project-001/frontend/src/components/FormModal/FormCreate.jsx
+> - frontend/src/App.js
+> - frontend/src/components/FormModal/FormCreate.jsx
+> - frontend/src/components/FormModal/FormDelete.jsx
+> - frontend/src/components/FormModal/FormEdit.jsx
+
 
 Once your docker image is working and your docker is connected to minikube. You can push your image in order to use it in your kubernetes cluster.
 
