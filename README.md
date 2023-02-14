@@ -1,9 +1,9 @@
 # Todo List Application
 
-This project is a full-stack web application that provides a platform to manage your todo tasks. The application is split into two parts: the Django API server and the React front-end.
 
 ![image](https://user-images.githubusercontent.com/9051426/218775964-68b066ba-fb6e-4085-a701-52054847ff9f.png)
 
+This project is a full-stack web application that provides a platform to manage your todo tasks. The application is split into two parts: the Django API server and the React front-end.
 
 ## Django API Server
 
