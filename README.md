@@ -40,20 +40,41 @@ Run django backend API server and react front-end locally.
 Check the application is working properly.
 
 
-## Step 2: Create Docker image for backend
+## Step 3: Create Docker image for backend
 
 Go to the Django API server directory and create a Dockerfile for the backend. Then build the Docker image. Finally, run the Docker container and check that the application is working properly.
 
-## Step 3: Create Docker image for frontend
+Connect your local to docker to the minikube docker ([explanations](https://minikube.sigs.k8s.io/docs/handbook/pushing/#1-pushing-directly-to-the-in-cluster-docker-daemon-docker-env)) : 
+```
+eval $(minikube docker-env)
+```
+
+Once your docker image is working and your docker is connected to minikube. You can push your image in order to use it in your kubernetes cluster.
+
+## Step 4: Deploy backend on Kubernetes
+
+Create deployment and service for backend application. Check you can access the application from your browser.
+
+## Step 5: Create Docker image for frontend
 
 Go to the React front-end directory and create a Dockerfile for the frontend. Then build the Docker image. Finally, run the Docker container and check that the application is working properly.
 
-## Step 4 : Create a Kubernetes Deployment
+> When you will deploy the frontend on Kubernetes (minikube), you will need to change the backend url in the frontend code. You can do it by editing the file `frontend/src/App.js` and change `127.0.0.1:8000` by the cluster url of backend application.
 
-Now you have two Docker images for the backend and frontend, you can create a Kubernetes deployment for each of them. Deploy the backend and frontend to the local Kubernetes cluster using Minikube. Check that the applications are running in your kubernetes cluster.
+Once your docker image is working and your docker is connected to minikube. You can push your image in order to use it in your kubernetes cluster.
 
-## Step 5 : Create a Kubernetes Service
+## Step 6: Deploy frontend on Kubernetes
 
-Create a Kubernetes service for each of the backend and frontend deployments. Check you can access the application from your browser.
+Create deployment and service for frontend application. Check you can access the application from your browser.
 
+Ensure your frontend is working properly with the backend.
 
+---
+
+## Step 7: Enhance the Kubernetes Deployment
+
+### Step 7.1: Database on persistent volume
+Handle volumes for backend application in order to have the database persistent (db.sqlite3).
+
+### Step 7.2: Enhance docker images
+Enhance backend and frontend docker build in order to have a smaller images (use [.dockerignore](https://docs.docker.com/engine/reference/builder/#dockerignore-file)).
